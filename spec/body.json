@@ -1,4 +1,7 @@
 {
-  "name": "A named thing",
-  "amount": 23000
+  "courtId": "crt_B16",
+  "userId": "usr_82Kd",
+  "bookingDate": "2026-09-05",
+  "startTime": "15:00",
+  "endTime": "16:00"
 }

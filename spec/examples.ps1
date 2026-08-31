@@ -5,9 +5,9 @@
 #  CHANGE THESE THREE LINES FOR YOUR OWN SYSTEM, then edit body.json.
 #  Nothing below this block needs touching.
 # ====================================================================
-$ListPath   = "/things"                    # your collection GET
-$ListQuery  = "status=active&limit=5"      # its filter
-$CreatePath = "/things"                    # your POST that must not happen twice
+$ListPath   = "/courts"                    # your collection GET
+$ListQuery  = "isAvailable=true"      # its filter
+$CreatePath = "/bookings"                    # your POST that must not happen twice
 # ====================================================================
 
 # Two Windows details this script handles for you:
