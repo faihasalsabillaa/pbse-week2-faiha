@@ -1,4 +1,4 @@
-# Week 2 Self-Check + Checkpoints 
+# Week 2 Self-Check + Checkpoints
 
 ## Checkpoint 1
 A screen-based address I might initially think of is 'GET /booking-page', because the user needs a page to view and make bookings. However, this should be split into actual resources such as '/courts' and '/bookings', since courts and bookings are persistent resources that can be identified and changed independently.
