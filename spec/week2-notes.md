@@ -1,4 +1,16 @@
-# Week 2 Self-Check - Ratu Faiha Salsabilla (24/532756/PA/22533)
+# Week 2 Self-Check + Checkpoints - Ratu Faiha Salsabilla (24/532756/PA/22533)
+
+## Checkpoint 1
+A screen-based address I might initially think of is 'GET /booking-page', because the user needs a page to view and make bookings. However, this should be split into actual resources such as '/courts' and '/bookings', since courts and bookings are persistent resources that can be identified and changed independently.
+
+## Checkpoint 2
+For my badminton booking system, a booking can change from 'pending' to 'confirmed'. Following rule 5, I would represent this as 'POST /bookings/{bookingId}/confirmation'. The verb version: 'POST /bookings/{bookingId}/confirm' is worse because it uses an action as the URI instead of representing the state transition as a noun-based sub-resource.
+
+## Checkpoint 3 
+For 'GET /courts', if the network drops and the client sends the request again, the user loses nothing because it is read-only. However, for 'POST /bookings', sending the request again could create a duplicate booking for the same court and time slot. Therefore, 'POST /bookings' needs an idempotency key so that retries of the same booking intention can be made harmless.
+
+
+## Self-check Answers
 
 ## 1. Somebody suggests 'POST /v1/orders/{id}/markReady' . Give two reasons to reject it, and write the address you would use instead.
 One reason I would reject this because 'markReady' is a verb, whilst the URI should represent a noun or resource. It also hides a state transition inside an action-style URI, which makes the API less consistent and harder for clients to understand. So, what i would do instead is use a noun or resource based address like 'POST /v1/orders/{id}/readiness' to represent the state transition
